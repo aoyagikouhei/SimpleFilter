@@ -1,14 +1,5 @@
-//
-//  CustomCell.m
-//  SimpleFiler
-//
-//  Created by 青柳 公右平 on 11/02/03.
-//  Copyright 2011 myself. All rights reserved.
-//
-
 #import "CustomCell.h"
 #import "FileNode.h"
-
 
 @implementation CustomCell
 
