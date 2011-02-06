@@ -28,63 +28,63 @@
 	[path release];
 	[name release];
 	[icon release];
-	[m_children release];
-	[m_files release];
+	[children release];
+	[files release];
 	[super dealloc];
 }
 
 - (NSMutableArray*) children
 {
-	if (!m_children) {
+	if (!children) {
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		BOOL isDir, valid = [fileManager fileExistsAtPath:path isDirectory:&isDir];
 		if (valid & isDir) {
 			NSError* error;
 			NSArray *array = [fileManager contentsOfDirectoryAtPath:path error:&error];
 			NSInteger cnt, numChildren = [array count];
-			m_children = [[NSMutableArray alloc] initWithCapacity:numChildren];
-			m_files = [[NSMutableArray alloc] initWithCapacity:numChildren];
+			children = [[NSMutableArray alloc] initWithCapacity:numChildren];
+			files = [[NSMutableArray alloc] initWithCapacity:numChildren];
 			for (cnt = 0; cnt < numChildren; cnt++) {
 				NSString *filePath = [path stringByAppendingPathComponent:[array objectAtIndex:cnt]];
 				valid = [fileManager fileExistsAtPath:filePath isDirectory:&isDir];
 				if (valid && isDir) {
 					FileNode *item = [[[FileNode alloc] initWithPath:filePath] autorelease];
-					[m_children addObject:item];
+					[children addObject:item];
 				}
 				if (valid && !isDir) {
 					FileNode *item = [[[FileNode alloc] initWithPath:filePath] autorelease];
-					[m_files addObject:item];
+					[files addObject:item];
 				}
 			}
-			if (0 == [m_children count]) {
-				[m_children release];
-				m_children = nil;
-				m_isLeaf = YES;
+			if (0 == [children count]) {
+				[children release];
+				children = nil;
+				isLeaf = YES;
 			} else {
-				m_isLeaf = NO;
+				isLeaf = NO;
 			}
 		} else {
-			m_isLeaf = YES;
-			m_children = nil;
+			isLeaf = YES;
+			children = nil;
 		}
 	}
-	return m_children;
+	return children;
 }
 
 - (BOOL) isLeaf
 {
-	if (!m_children) {
+	if (!children) {
 		[self children];
 	}
-	return m_isLeaf;
+	return isLeaf;
 }
 
 - (NSMutableArray*) files
 {
-	if (!m_children) {
+	if (!children) {
 		[self children];
 	}
-	return m_files;
+	return files;
 }
 
 - (FileNode*) me

@@ -307,7 +307,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FileNode.m</string>
+								<string>SimpleFilerAppDelegate.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -315,11 +315,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FileNode.m</string>
+										<string>SimpleFilerAppDelegate.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C3934A1F12FB6DF6000C63CB</string>
+										<string>C3934A4512FB823F000C63CB</string>
 										<key>history</key>
 										<array>
 											<string>C3F9301912F7876100C09E15</string>
@@ -327,10 +327,10 @@
 											<string>C3F9301B12F7876100C09E15</string>
 											<string>C321DBFE12FA244F0056E4C4</string>
 											<string>C321DC1112FA258E0056E4C4</string>
-											<string>C3236D3012FAB442008706CC</string>
-											<string>C3236D3112FAB442008706CC</string>
 											<string>C3934A0812FB6692000C63CB</string>
-											<string>C3934A0A12FB6692000C63CB</string>
+											<string>C3934A4312FB823F000C63CB</string>
+											<string>C3934A4412FB823F000C63CB</string>
+											<string>C3236D3112FAB442008706CC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -530,7 +530,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>C3934A2A12FB6DF6000C63CB</string>
 		<string>C3934A2B12FB6DF6000C63CB</string>
 		<string>C3934A2C12FB6DF6000C63CB</string>
 		<string>1C78EAAD065D492600B07095</string>

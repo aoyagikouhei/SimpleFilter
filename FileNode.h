@@ -2,9 +2,9 @@
 
 
 @interface FileNode : NSObject {
-	NSMutableArray* m_children;
-	NSMutableArray* m_files;
-	BOOL m_isLeaf;
+	NSMutableArray* children;
+	NSMutableArray* files;
+	BOOL isLeaf;
 	NSString* name;
 	NSString* path;
 	NSImage* icon;
